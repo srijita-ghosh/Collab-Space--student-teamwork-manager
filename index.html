@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Teamwork, made simple{% endblock %}
+{% block public_content %}
+<header class="marketing-nav">
+  <div class="container nav-inner">
+    <a class="brand brand-marketing" href="{{ url_for('home') }}"><span class="brand-mark"><i class="bi bi-intersect"></i></span><span>collab<span class="brand-light">space</span></span></a>
+    <nav class="marketing-links"><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#about">About</a></nav>
+    <div class="nav-actions"><a class="nav-login" href="{{ url_for('login') }}">Log in</a><a class="btn btn-primary-soft" href="{{ url_for('signup') }}">Get started <i class="bi bi-arrow-up-right"></i></a></div>
+    <button class="mobile-menu marketing-menu icon-button" id="marketingToggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+<main>
+  <section class="hero-section">
+    <div class="hero-glow hero-glow-one"></div><div class="hero-glow hero-glow-two"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> THE SMARTER WAY TO WORK TOGETHER</div>
+        <h1>Great projects<br>happen <span>together.</span></h1>
+        <p class="hero-description">One calm, organised space for your team to plan projects, share the workload and turn college ideas into done deals.</p>
+        <div class="hero-actions"><a class="btn btn-primary btn-lg" href="{{ url_for('signup') }}">Create your workspace <i class="bi bi-arrow-right"></i></a><a class="btn btn-link-muted" href="#how-it-works"><i class="bi bi-play-circle"></i> See how it works</a></div>
+        <div class="hero-proof"><div class="proof-avatars"><span>S</span><span>R</span><span>A</span><span>P</span></div><div><strong>Better work, less chaos.</strong><small>Built for student teams and big ideas.</small></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="dashboard-preview">
+          <div class="preview-top"><div class="preview-brand"><span class="mini-brand"><i class="bi bi-intersect"></i></span><strong>Workspace</strong></div><div class="preview-dots"><i></i><i></i><i></i></div></div>
+          <div class="preview-body">
+            <div class="preview-greeting"><div><small>MONDAY, PROJECT OVERVIEW</small><h3>Hey, Srijita <span>✦</span></h3><p>Here's what's moving in your team.</p></div><div class="preview-user">S</div></div>
+            <div class="preview-stats"><div class="preview-stat"><span class="stat-symbol purple"><i class="bi bi-list-task"></i></span><small>Total tasks</small><strong>24</strong><em>Across your team</em></div><div class="preview-stat"><span class="stat-symbol mint"><i class="bi bi-check2-circle"></i></span><small>Completed</small><strong>16</strong><em>Looking good!</em></div><div class="preview-stat"><span class="stat-symbol orange"><i class="bi bi-hourglass-split"></i></span><small>In progress</small><strong>05</strong><em>Keep it up</em></div></div>
+            <div class="preview-lower"><div class="preview-project"><div class="preview-section-head"><strong>Team progress</strong><span>View all</span></div><div class="project-row"><div class="project-icon"><i class="bi bi-cpu"></i></div><div class="project-info"><strong>AI Study Buddy</strong><small>4 members · 12 tasks</small></div><b>75%</b></div><div class="tiny-progress"><span style="width:75%"></span></div><div class="preview-task"><div class="task-check checked"><i class="bi bi-check"></i></div><div><strong>Design the dashboard</strong><small>Completed · Srijita</small></div><span class="tiny-tag done">Done</span></div><div class="preview-task"><div class="task-check"></div><div><strong>Connect database</strong><small>Due tomorrow · Rahul</small></div><span class="tiny-tag doing">In progress</span></div></div></div>
+          </div>
+        </div>
+        <div class="floating-note note-top"><span class="note-icon"><i class="bi bi-lightning-charge-fill"></i></span><div><strong>You're on a roll!</strong><small>Team progress is up 18%</small></div></div>
+        <div class="floating-note note-bottom"><div class="note-avatars"><span>R</span><span>A</span><span>P</span></div><div><strong>Teamwork in sync</strong><small>Everyone knows what's next</small></div><i class="bi bi-check-circle-fill"></i></div>
+      </div>
+    </div>
+    <div class="container hero-bottom"><span>LESS CHAOS, MORE CHECKMARKS</span><div><i class="bi bi-check2-circle"></i> Clear ownership <i class="bi bi-check2-circle"></i> Shared progress <i class="bi bi-check2-circle"></i> One team space</div></div>
+  </section>
+
+  <section class="section features-section" id="features">
+    <div class="container"><div class="section-heading"><div class="eyebrow centered-eyebrow">EVERYTHING IN ONE PLACE</div><h2>All the moving parts.<br><span>One clear picture.</span></h2><p>Keep your group project organised from the first brainstorm to the final submission.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card feature-large"><div class="feature-icon lavender"><i class="bi bi-kanban"></i></div><h3>Tasks that stay on track</h3><p>Create tasks, assign clear owners, set priorities and add deadlines. Everyone knows what they need to do next.</p><div class="feature-mini-board"><div><span class="board-dot dot-pink"></span> Pending <b>03</b></div><div><span class="board-dot dot-yellow"></span> In progress <b>05</b></div><div><span class="board-dot dot-green"></span> Completed <b>12</b></div></div></article>
+        <article class="feature-card"><div class="feature-icon mint-bg"><i class="bi bi-people"></i></div><h3>Your team, together</h3><p>Create a shared team space and invite classmates with a simple code.</p><div class="feature-people"><span>S</span><span>R</span><span>A</span><span>P</span><b>+2</b></div></article>
+        <article class="feature-card"><div class="feature-icon peach"><i class="bi bi-graph-up-arrow"></i></div><h3>Progress at a glance</h3><p>See completed, pending and ongoing work without chasing anyone for updates.</p><div class="mini-bars"><i style="height:36%"></i><i style="height:52%"></i><i style="height:45%"></i><i style="height:76%"></i><i style="height:62%"></i><i style="height:92%"></i><i style="height:82%"></i></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section how-section" id="how-it-works"><div class="container how-grid"><div class="how-copy"><div class="eyebrow">UP AND RUNNING IN MINUTES</div><h2>From group chat<br>to <span>get-it-done.</span></h2><p>Set up your team once. Then keep every task, deadline and update in one shared workspace.</p><a class="btn btn-primary" href="{{ url_for('signup') }}">Start collaborating <i class="bi bi-arrow-right"></i></a></div><div class="steps-list"><div class="step-item"><div class="step-number">01</div><div><h3>Create your space</h3><p>Sign up and create a team for your college project.</p></div><i class="bi bi-grid-1x2 step-art"></i></div><div class="step-item"><div class="step-number">02</div><div><h3>Bring everyone in</h3><p>Share your unique invite code so teammates can join.</p></div><i class="bi bi-person-plus step-art"></i></div><div class="step-item"><div class="step-number">03</div><div><h3>Plan, assign and finish</h3><p>Assign tasks, update statuses and watch your progress grow.</p></div><i class="bi bi-rocket-takeoff step-art"></i></div></div></div></section>
+
+  <section class="cta-section" id="about"><div class="container cta-inner"><div><div class="eyebrow cta-eyebrow">YOUR NEXT PROJECT STARTS HERE</div><h2>Make room for the<br><span>good ideas.</span></h2><p>Less time coordinating. More time creating something great.</p></div><a class="btn btn-white btn-lg" href="{{ url_for('signup') }}">Build your workspace <i class="bi bi-arrow-up-right"></i></a><div class="cta-decoration"><i class="bi bi-stars"></i></div></div></section>
+</main>
+<footer class="marketing-footer"><div class="container footer-inner"><a class="brand brand-marketing" href="{{ url_for('home') }}"><span class="brand-mark"><i class="bi bi-intersect"></i></span><span>collab<span class="brand-light">space</span></span></a><span>© {{ year }} CollabSpace · Made for student teams.</span><a href="{{ url_for('login') }}">Log in <i class="bi bi-arrow-up-right"></i></a></div></footer>
+{% endblock %}

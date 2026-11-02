@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block breadcrumb %}Error {{ code }}{% endblock %}
+{% block content %}
+<div class="error-page"><div class="error-code">{{ code }}</div><div class="eyebrow">OOPS, A LITTLE DETOUR</div><h1>{{ title }}</h1><p>{{ message }}</p><a href="{{ url_for('dashboard') if current_user else url_for('home') }}" class="btn btn-primary"><i class="bi bi-arrow-left"></i> Back to {{ 'dashboard' if current_user else 'home' }}</a></div>
+{% endblock %}
